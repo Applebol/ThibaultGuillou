@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int Jeu = 0;
+
+   printf("Voulez-vous jouer seul ou en coop ?\n\n");
+   printf("1. Seul                   2. Coop\n\n");
+   scanf("%d", &Jeu);
+
+// Mode solo ici
+
+if (Jeu == 1)
+
+do{
+
+   int nombreMystere = 0, nombreChoisi = 0, nombreDeCoups = 0;
+
+   const int MAX = 100, MIN = 1;
+
+   srand(time(NULL));
+    nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
+
+    do
+    {
+    printf("Quel nombre ai-je choisi ?\n");
+    scanf("%d", &nombreChoisi);
+    nombreDeCoups++;
+
+
+    if (nombreChoisi < nombreMystere)
+        printf("C'est plus !\n\n");
+   else if (nombreChoisi > nombreMystere)
+            printf("C'est moins !\n\n");
+   else
+    printf("Bravo, vous avez reussi en %d coups ! \n\n", nombreDeCoups);
+
+   }
+
+    while (nombreChoisi != nombreMystere); }
+
+    while (Jeu == 1);
+
+
+    // Mode Coop ici
+
+    int nombreChoisi = 0, nombreMystere = 0, nombreDeCoups = 0;
+
+if (Jeu == 2)
+
+
+printf("Quel nombre choisissez-vous pour votre ami ?\n");
+    scanf("%d", &nombreMystere);
+      do{
+                printf("Quel nombre ai-je choisi ? \n");
+    scanf("%d", &nombreChoisi);
+    nombreDeCoups++;
+
+    if ( nombreChoisi > nombreMystere)
+        printf("C'est moins !\n");
+
+        else if ( nombreChoisi < nombreMystere)
+        printf("C'est plus ! \n");
+    else printf("Bravo ! Vous avez trouve le nombre mystere !!! \n\n");
+}
+while ( nombreChoisi != nombreMystere);
+return 0;
+}
+
+
+
+
+
+
+
