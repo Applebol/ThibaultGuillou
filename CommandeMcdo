@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int Menu = 0;
+    printf("=== Menu ===\n\n");
+    printf("1. Royal Cheese\n");
+    printf("2. Mc Deluxe\n");
+    printf("3. Mc Bacon\n");
+    printf("4. Big Mac\n");
+    printf("\nVotre choix ?\n");
+
+       scanf("%d",&Menu);
+
+    switch(Menu)
+    {
+    case 1 :
+        printf("Tu as choisi le Royal Cheese\n");
+        break;
+    case 2 :
+        printf("Tu as choisi le Mc Deluxe\n");
+        break;
+    case 3 :
+        printf("Tu as choisi le Mc Bacon\n");
+        break;
+    case 4 :
+        printf("Tu as choisi le Big Mac\n");
+        break;
+    default :
+        printf("Tu ne veux donc pas manger au McDo\n");
+        break;
+    }
+    printf("\n\n");
+}
